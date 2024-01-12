@@ -1,0 +1,5 @@
+C:\Biztalk\Warehouse\EAISolution\EAISchemas\bin\Debug\EAISchemas.dll
+C:\Biztalk\Warehouse\EAISolution\EAISchemas\bin\Debug\EAISchemas.pdb
+C:\Biztalk\Warehouse\EAISolution\EAISchemas\obj\Debug\EAISchemas.btproj.CoreCompileInputs.cache
+C:\Biztalk\Warehouse\EAISolution\EAISchemas\obj\Debug\EAISchemas.dll
+C:\Biztalk\Warehouse\EAISolution\EAISchemas\obj\Debug\EAISchemas.pdb
