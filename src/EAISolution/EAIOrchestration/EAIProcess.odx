@@ -2,7 +2,7 @@
 #error Do not define __DESIGNER_DATA.
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
-    <om:Element Type="Module" OID="29184ed2-fc2d-44ca-a71d-9686ee19f446" LowerBound="1.1" HigherBound="60.1">
+    <om:Element Type="Module" OID="29184ed2-fc2d-44ca-a71d-9686ee19f446" LowerBound="1.1" HigherBound="85.1">
         <om:Property Name="ReportToAnalyst" Value="True" />
         <om:Property Name="Name" Value="EAIOrchestration" />
         <om:Property Name="Signal" Value="False" />
@@ -63,21 +63,59 @@
                 </om:Element>
             </om:Element>
         </om:Element>
-        <om:Element Type="ServiceDeclaration" OID="bb0efbab-6bbe-46aa-8840-454a6850db33" ParentLink="Module_ServiceDeclaration" LowerBound="25.1" HigherBound="59.1">
+        <om:Element Type="PortType" OID="2b6debb7-4e83-4b88-a5ab-1a6624843abb" ParentLink="Module_PortType" LowerBound="25.1" HigherBound="32.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="SendToGlobalEnvoieType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="883c6940-6433-41fa-b462-6c47227f59ff" ParentLink="PortType_OperationDeclaration" LowerBound="27.1" HigherBound="31.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="29e15441-309c-4f64-beae-97bd987f30fe" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="29.13" HigherBound="29.31">
+                    <om:Property Name="Ref" Value="EAISchemas.Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="fcd22b43-52ba-4852-9468-22f2efd656d2" ParentLink="Module_PortType" LowerBound="32.1" HigherBound="39.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="SendToRapideLivraisonType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="280aefbf-14c6-45f2-b1d8-c4115479fd86" ParentLink="PortType_OperationDeclaration" LowerBound="34.1" HigherBound="38.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="85d1b9ae-f70b-473b-bbff-98f403b2eb05" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="36.13" HigherBound="36.31">
+                    <om:Property Name="Ref" Value="EAISchemas.Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="bb0efbab-6bbe-46aa-8840-454a6850db33" ParentLink="Module_ServiceDeclaration" LowerBound="39.1" HigherBound="84.1">
             <om:Property Name="InitializedTransactionType" Value="False" />
             <om:Property Name="IsInvokable" Value="False" />
             <om:Property Name="TypeModifier" Value="Internal" />
             <om:Property Name="ReportToAnalyst" Value="True" />
             <om:Property Name="Name" Value="EAIProcess" />
             <om:Property Name="Signal" Value="False" />
-            <om:Element Type="MessageDeclaration" OID="f0200c7d-caf5-4c4a-8daf-3792702cf849" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="34.1" HigherBound="35.1">
+            <om:Element Type="MessageDeclaration" OID="f0200c7d-caf5-4c4a-8daf-3792702cf849" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="50.1" HigherBound="51.1">
                 <om:Property Name="Type" Value="EAISchemas.Request" />
                 <om:Property Name="ParamDirection" Value="In" />
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="RequestMessage" />
                 <om:Property Name="Signal" Value="True" />
             </om:Element>
-            <om:Element Type="MessageDeclaration" OID="afef718b-f85e-4dd8-9c9e-71897ed2afc3" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="35.1" HigherBound="36.1">
+            <om:Element Type="MessageDeclaration" OID="afef718b-f85e-4dd8-9c9e-71897ed2afc3" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="51.1" HigherBound="52.1">
                 <om:Property Name="Type" Value="EAISchemas.RequestDecline" />
                 <om:Property Name="ParamDirection" Value="In" />
                 <om:Property Name="ReportToAnalyst" Value="True" />
@@ -86,7 +124,7 @@
             </om:Element>
             <om:Element Type="ServiceBody" OID="781df3e3-2399-4614-bee7-1310bc952509" ParentLink="ServiceDeclaration_ServiceBody">
                 <om:Property Name="Signal" Value="False" />
-                <om:Element Type="Receive" OID="c938b0b6-2cb6-4108-9ee0-a4f639b56359" ParentLink="ServiceBody_Statement" LowerBound="38.1" HigherBound="40.1">
+                <om:Element Type="Receive" OID="c938b0b6-2cb6-4108-9ee0-a4f639b56359" ParentLink="ServiceBody_Statement" LowerBound="54.1" HigherBound="56.1">
                     <om:Property Name="Activate" Value="True" />
                     <om:Property Name="PortName" Value="ReceiveRequestPort" />
                     <om:Property Name="MessageName" Value="RequestMessage" />
@@ -96,45 +134,45 @@
                     <om:Property Name="Name" Value="ReceiveRequest" />
                     <om:Property Name="Signal" Value="True" />
                 </om:Element>
-                <om:Element Type="Decision" OID="7d861cc7-0f40-4c6c-a567-ad04bad6a0ca" ParentLink="ServiceBody_Statement" LowerBound="40.1" HigherBound="57.1">
+                <om:Element Type="Decision" OID="7d861cc7-0f40-4c6c-a567-ad04bad6a0ca" ParentLink="ServiceBody_Statement" LowerBound="56.1" HigherBound="82.1">
                     <om:Property Name="ReportToAnalyst" Value="True" />
                     <om:Property Name="Name" Value="CheckGrandTotal" />
                     <om:Property Name="Signal" Value="True" />
-                    <om:Element Type="DecisionBranch" OID="d74a09a2-e02d-4f0f-b5e8-44cbc83a2529" ParentLink="ReallyComplexStatement_Branch" LowerBound="41.13" HigherBound="52.1">
+                    <om:Element Type="DecisionBranch" OID="d74a09a2-e02d-4f0f-b5e8-44cbc83a2529" ParentLink="ReallyComplexStatement_Branch" LowerBound="57.13" HigherBound="68.1">
                         <om:Property Name="Expression" Value="RequestMessage(EAISchemas.PropertySchema.GrandTotal ) &gt; 10000" />
                         <om:Property Name="IsGhostBranch" Value="True" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="DeclineRule" />
                         <om:Property Name="Signal" Value="False" />
-                        <om:Element Type="Construct" OID="b54f55d6-82d8-48c5-8171-bdd3058c6d39" ParentLink="ComplexStatement_Statement" LowerBound="43.1" HigherBound="49.1">
+                        <om:Element Type="Construct" OID="b54f55d6-82d8-48c5-8171-bdd3058c6d39" ParentLink="ComplexStatement_Statement" LowerBound="59.1" HigherBound="65.1">
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="ConstructRequestDeclineMessage" />
                             <om:Property Name="Signal" Value="True" />
-                            <om:Element Type="Transform" OID="2b0ece49-bb3d-4a89-9dc7-e31c4245e504" ParentLink="ComplexStatement_Statement" LowerBound="46.1" HigherBound="48.1">
+                            <om:Element Type="Transform" OID="2b0ece49-bb3d-4a89-9dc7-e31c4245e504" ParentLink="ComplexStatement_Statement" LowerBound="62.1" HigherBound="64.1">
                                 <om:Property Name="ClassName" Value="EAISchemas.MapToReqDecline" />
                                 <om:Property Name="ReportToAnalyst" Value="True" />
                                 <om:Property Name="Name" Value="TransformRequestToRequestDeclineMessage" />
                                 <om:Property Name="Signal" Value="False" />
-                                <om:Element Type="MessagePartRef" OID="d393a5fd-c0e9-42b3-acfc-f60b2eb9fddb" ParentLink="Transform_InputMessagePartRef" LowerBound="47.85" HigherBound="47.99">
+                                <om:Element Type="MessagePartRef" OID="d393a5fd-c0e9-42b3-acfc-f60b2eb9fddb" ParentLink="Transform_InputMessagePartRef" LowerBound="63.85" HigherBound="63.99">
                                     <om:Property Name="MessageRef" Value="RequestMessage" />
                                     <om:Property Name="ReportToAnalyst" Value="True" />
                                     <om:Property Name="Name" Value="MessagePartReference_1" />
                                     <om:Property Name="Signal" Value="False" />
                                 </om:Element>
-                                <om:Element Type="MessagePartRef" OID="0532c9ef-6ff2-449a-8501-4f0428341367" ParentLink="Transform_OutputMessagePartRef" LowerBound="47.32" HigherBound="47.53">
+                                <om:Element Type="MessagePartRef" OID="0532c9ef-6ff2-449a-8501-4f0428341367" ParentLink="Transform_OutputMessagePartRef" LowerBound="63.32" HigherBound="63.53">
                                     <om:Property Name="MessageRef" Value="RequestDeclineMessage" />
                                     <om:Property Name="ReportToAnalyst" Value="True" />
                                     <om:Property Name="Name" Value="MessagePartReference_2" />
                                     <om:Property Name="Signal" Value="False" />
                                 </om:Element>
                             </om:Element>
-                            <om:Element Type="MessageRef" OID="3b3ecf4b-ad60-43d3-80bf-e7d02982767d" ParentLink="Construct_MessageRef" LowerBound="44.27" HigherBound="44.48">
+                            <om:Element Type="MessageRef" OID="3b3ecf4b-ad60-43d3-80bf-e7d02982767d" ParentLink="Construct_MessageRef" LowerBound="60.27" HigherBound="60.48">
                                 <om:Property Name="Ref" Value="RequestDeclineMessage" />
                                 <om:Property Name="ReportToAnalyst" Value="True" />
                                 <om:Property Name="Signal" Value="False" />
                             </om:Element>
                         </om:Element>
-                        <om:Element Type="Send" OID="0749b291-2468-46b8-8ccb-d9a822669c62" ParentLink="ComplexStatement_Statement" LowerBound="49.1" HigherBound="51.1">
+                        <om:Element Type="Send" OID="0749b291-2468-46b8-8ccb-d9a822669c62" ParentLink="ComplexStatement_Statement" LowerBound="65.1" HigherBound="67.1">
                             <om:Property Name="PortName" Value="SendDeclinePort" />
                             <om:Property Name="MessageName" Value="RequestDeclineMessage" />
                             <om:Property Name="OperationName" Value="Operation_1" />
@@ -149,19 +187,46 @@
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="Else" />
                         <om:Property Name="Signal" Value="False" />
-                        <om:Element Type="Send" OID="d9177521-3f95-404c-9e9d-1ec0d82e24c9" ParentLink="ComplexStatement_Statement" LowerBound="54.1" HigherBound="56.1">
-                            <om:Property Name="PortName" Value="SendToERPPort" />
-                            <om:Property Name="MessageName" Value="RequestMessage" />
-                            <om:Property Name="OperationName" Value="Operation_1" />
-                            <om:Property Name="OperationMessageName" Value="Request" />
+                        <om:Element Type="Decision" OID="c6c09ca9-1ed1-4cba-b141-01adb80274cc" ParentLink="ComplexStatement_Statement" LowerBound="70.1" HigherBound="81.1">
                             <om:Property Name="ReportToAnalyst" Value="True" />
-                            <om:Property Name="Name" Value="SendRequestToERP" />
+                            <om:Property Name="Name" Value="DecideShippingCompany" />
                             <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="DecisionBranch" OID="98604df0-f52b-4ca3-a4fe-06a3d474ae64" ParentLink="ReallyComplexStatement_Branch" LowerBound="71.17" HigherBound="76.1">
+                                <om:Property Name="Expression" Value="RequestMessage(EAISchemas.PropertySchema.Category ) == &quot;VideoGame&quot;" />
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="IsVideoGame" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="Send" OID="d9177521-3f95-404c-9e9d-1ec0d82e24c9" ParentLink="ComplexStatement_Statement" LowerBound="73.1" HigherBound="75.1">
+                                    <om:Property Name="PortName" Value="SendToGlobalEnvoie" />
+                                    <om:Property Name="MessageName" Value="RequestMessage" />
+                                    <om:Property Name="OperationName" Value="Operation_1" />
+                                    <om:Property Name="OperationMessageName" Value="Request" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="SendRequestToGlobalEnvoi" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="DecisionBranch" OID="3d3e6439-6b5d-4fc5-b86d-e274369ef568" ParentLink="ReallyComplexStatement_Branch">
+                                <om:Property Name="IsGhostBranch" Value="True" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Else" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="Send" OID="0f7c463a-af53-48e2-9551-194f49340ec7" ParentLink="ComplexStatement_Statement" LowerBound="78.1" HigherBound="80.1">
+                                    <om:Property Name="PortName" Value="SendToRapideLivraison" />
+                                    <om:Property Name="MessageName" Value="RequestMessage" />
+                                    <om:Property Name="OperationName" Value="Operation_1" />
+                                    <om:Property Name="OperationMessageName" Value="Request" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="SendRequestToRapideLivraison" />
+                                    <om:Property Name="Signal" Value="True" />
+                                </om:Element>
+                            </om:Element>
                         </om:Element>
                     </om:Element>
                 </om:Element>
             </om:Element>
-            <om:Element Type="PortDeclaration" OID="7bf8176f-5270-4c32-a81c-dba90ed97d77" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="28.1" HigherBound="30.1">
+            <om:Element Type="PortDeclaration" OID="7bf8176f-5270-4c32-a81c-dba90ed97d77" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="42.1" HigherBound="44.1">
                 <om:Property Name="PortModifier" Value="Implements" />
                 <om:Property Name="Orientation" Value="Left" />
                 <om:Property Name="PortIndex" Value="8" />
@@ -173,14 +238,46 @@
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="ReceiveRequestPort" />
                 <om:Property Name="Signal" Value="False" />
-                <om:Element Type="LogicalBindingAttribute" OID="53f7a7e7-92e0-4fba-9195-b0feb20218cc" ParentLink="PortDeclaration_CLRAttribute" LowerBound="28.1" HigherBound="29.1">
+                <om:Element Type="LogicalBindingAttribute" OID="53f7a7e7-92e0-4fba-9195-b0feb20218cc" ParentLink="PortDeclaration_CLRAttribute" LowerBound="42.1" HigherBound="43.1">
                     <om:Property Name="Signal" Value="False" />
                 </om:Element>
             </om:Element>
-            <om:Element Type="PortDeclaration" OID="614ef644-cd67-41ad-9d8e-181272fe4e47" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="30.1" HigherBound="32.1">
+            <om:Element Type="PortDeclaration" OID="d4150605-15fa-44b1-a6e3-440c0c4e4652" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="44.1" HigherBound="46.1">
                 <om:Property Name="PortModifier" Value="Uses" />
                 <om:Property Name="Orientation" Value="Right" />
                 <om:Property Name="PortIndex" Value="8" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="EAIOrchestration.SendToGlobalEnvoieType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendToGlobalEnvoie" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="7d14c40c-890d-47e0-af07-95ebfcece720" ParentLink="PortDeclaration_CLRAttribute" LowerBound="44.1" HigherBound="45.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="97583e54-ec84-42d1-bf46-1ecd642e64c4" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="46.1" HigherBound="48.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="14" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="EAIOrchestration.SendToRapideLivraisonType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendToRapideLivraison" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="12e7f88a-d704-444f-9acb-022821ab2321" ParentLink="PortDeclaration_CLRAttribute" LowerBound="46.1" HigherBound="47.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="56831eb9-65fe-4b00-82a7-240072f3c054" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="48.1" HigherBound="50.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="24" />
                 <om:Property Name="IsWebPort" Value="False" />
                 <om:Property Name="OrderedDelivery" Value="False" />
                 <om:Property Name="DeliveryNotification" Value="None" />
@@ -189,23 +286,7 @@
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="SendDeclinePort" />
                 <om:Property Name="Signal" Value="True" />
-                <om:Element Type="LogicalBindingAttribute" OID="189ac224-8464-48a6-ad95-28c14018d036" ParentLink="PortDeclaration_CLRAttribute" LowerBound="30.1" HigherBound="31.1">
-                    <om:Property Name="Signal" Value="False" />
-                </om:Element>
-            </om:Element>
-            <om:Element Type="PortDeclaration" OID="4e786207-8b38-4d62-ad22-4297af8c2c6b" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="32.1" HigherBound="34.1">
-                <om:Property Name="PortModifier" Value="Uses" />
-                <om:Property Name="Orientation" Value="Right" />
-                <om:Property Name="PortIndex" Value="13" />
-                <om:Property Name="IsWebPort" Value="False" />
-                <om:Property Name="OrderedDelivery" Value="False" />
-                <om:Property Name="DeliveryNotification" Value="None" />
-                <om:Property Name="Type" Value="EAIOrchestration.SendToERPPortType" />
-                <om:Property Name="ParamDirection" Value="In" />
-                <om:Property Name="ReportToAnalyst" Value="True" />
-                <om:Property Name="Name" Value="SendToERPPort" />
-                <om:Property Name="Signal" Value="True" />
-                <om:Element Type="LogicalBindingAttribute" OID="d39a1b25-f7aa-4ccd-b739-1d235e00ca2d" ParentLink="PortDeclaration_CLRAttribute" LowerBound="32.1" HigherBound="33.1">
+                <om:Element Type="LogicalBindingAttribute" OID="560023f1-efbe-4f75-bd7c-9271e55dd07f" ParentLink="PortDeclaration_CLRAttribute" LowerBound="48.1" HigherBound="49.1">
                     <om:Property Name="Signal" Value="False" />
                 </om:Element>
             </om:Element>
@@ -237,15 +318,31 @@ module EAIOrchestration
             EAISchemas.Request
         };
     };
+    internal porttype SendToGlobalEnvoieType
+    {
+        oneway Operation_1
+        {
+            EAISchemas.Request
+        };
+    };
+    internal porttype SendToRapideLivraisonType
+    {
+        oneway Operation_1
+        {
+            EAISchemas.Request
+        };
+    };
     [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
     internal service EAIProcess
     {
         [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
         port implements ReceiveRequestPortType ReceiveRequestPort;
         [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
-        port uses SendDeclinePortType SendDeclinePort;
+        port uses SendToGlobalEnvoieType SendToGlobalEnvoie;
         [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
-        port uses SendToERPPortType SendToERPPort;
+        port uses SendToRapideLivraisonType SendToRapideLivraison;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses SendDeclinePortType SendDeclinePort;
         message EAISchemas.Request RequestMessage;
         message EAISchemas.RequestDecline RequestDeclineMessage;
         body ()
@@ -266,8 +363,17 @@ module EAIOrchestration
             }
             else 
             {
-                [Microsoft.XLANGs.BaseTypes.DesignerPosition("d9177521-3f95-404c-9e9d-1ec0d82e24c9")]
-                send (SendToERPPort.Operation_1, RequestMessage);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("c6c09ca9-1ed1-4cba-b141-01adb80274cc")]
+                if (RequestMessage(EAISchemas.PropertySchema.Category ) == "VideoGame")
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("d9177521-3f95-404c-9e9d-1ec0d82e24c9")]
+                    send (SendToGlobalEnvoie.Operation_1, RequestMessage);
+                }
+                else 
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("0f7c463a-af53-48e2-9551-194f49340ec7")]
+                    send (SendToRapideLivraison.Operation_1, RequestMessage);
+                }
             }
         }
     }

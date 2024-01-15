@@ -1,8 +1,0 @@
-C:\Biztalk\Warehouse\EAISolution\EAIOrchestration\bin\Debug\EAIOrchestration.dll
-C:\Biztalk\Warehouse\EAISolution\EAIOrchestration\bin\Debug\EAIOrchestration.pdb
-C:\Biztalk\Warehouse\EAISolution\EAIOrchestration\bin\Debug\EAISchemas.dll
-C:\Biztalk\Warehouse\EAISolution\EAIOrchestration\obj\Debug\EAIOrchestration.btproj.AssemblyReference.cache
-C:\Biztalk\Warehouse\EAISolution\EAIOrchestration\obj\Debug\EAIOrchestration.btproj.CoreCompileInputs.cache
-C:\Biztalk\Warehouse\EAISolution\EAIOrchestration\obj\Debug\EAIOrchestration.btproj.CopyComplete
-C:\Biztalk\Warehouse\EAISolution\EAIOrchestration\obj\Debug\EAIOrchestration.dll
-C:\Biztalk\Warehouse\EAISolution\EAIOrchestration\obj\Debug\EAIOrchestration.pdb
