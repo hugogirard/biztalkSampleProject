@@ -1,0 +1,34 @@
+{
+    "Invoice": {
+      "CustomerInfo": {
+        "ReqID": "REQ12345",
+        "OrderDate": "2022-01-01T00:00:00",
+        "InvoiceDate": "2022-01-01T00:00:00",
+        "CustomerName": "John Doe",
+        "CustomerID": "CUST12345",
+        "VIPCustomer": "Yes"
+      },
+      "Item": [
+        {
+          "Description": "Laptop",
+          "UnitPrice": "1000",
+          "TotalPrice": 1000,
+          "Quantity": 1
+        },
+        {
+          "Description": "Mouse",
+          "UnitPrice": "50",
+          "TotalPrice": 50,
+          "Quantity": 1
+        }
+      ],      
+      "PaymentInfo": {
+        "TotalBeforeTaxes": 1050,
+        "Discount": 10,
+        "TotalAfterDiscount": 945,
+        "Taxes": 141.75,
+        "TotalWithTaxes": 1086.75,
+        "ModeOfPayment": "Cash"
+      }
+    }
+  }
