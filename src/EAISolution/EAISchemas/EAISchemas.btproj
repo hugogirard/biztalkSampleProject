@@ -112,11 +112,6 @@
       <Namespace>EAISchemas</Namespace>
       <SubType>Task</SubType>
     </Schema>
-    <Schema Include="PurchaseOrder.xsd">
-      <TypeName>PurchaseOrder</TypeName>
-      <Namespace>EAISchemas</Namespace>
-      <SubType>Task</SubType>
-    </Schema>
   </ItemGroup>
   <ItemGroup>
     <Map Include="MapToOrder.btm">

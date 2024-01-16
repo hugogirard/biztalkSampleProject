@@ -90,13 +90,6 @@
     </XLang>
   </ItemGroup>
   <ItemGroup>
-    <Pipeline Include="JSONToXmlReceivePipeline.btp">
-      <TypeName>JSONToXmlReceivePipeline</TypeName>
-      <Namespace>EAIOrchestration</Namespace>
-      <SubType>Task</SubType>
-    </Pipeline>
-  </ItemGroup>
-  <ItemGroup>
     <Pipeline Include="XmlToJSONSendPipeline.btp">
       <TypeName>XmlToJSONSendPipeline</TypeName>
       <Namespace>EAIOrchestration</Namespace>
