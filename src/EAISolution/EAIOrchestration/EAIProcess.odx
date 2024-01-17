@@ -127,11 +127,11 @@
                     <om:Property Name="Name" Value="CheckGrandTotal" />
                     <om:Property Name="Signal" Value="True" />
                     <om:Element Type="DecisionBranch" OID="d74a09a2-e02d-4f0f-b5e8-44cbc83a2529" ParentLink="ReallyComplexStatement_Branch" LowerBound="51.13" HigherBound="62.1">
-                        <om:Property Name="Expression" Value="RequestMessage(EAISchemas.PropertySchema.GrandTotal ) &gt; 300" />
+                        <om:Property Name="Expression" Value="RequestMessage(EAISchemas.PropertySchema.GrandTotal ) &gt; 500" />
                         <om:Property Name="IsGhostBranch" Value="True" />
                         <om:Property Name="ReportToAnalyst" Value="True" />
                         <om:Property Name="Name" Value="DeclineRule" />
-                        <om:Property Name="Signal" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
                         <om:Element Type="Construct" OID="b54f55d6-82d8-48c5-8171-bdd3058c6d39" ParentLink="ComplexStatement_Statement" LowerBound="53.1" HigherBound="59.1">
                             <om:Property Name="ReportToAnalyst" Value="True" />
                             <om:Property Name="Name" Value="ConstructRequestDeclineMessage" />
@@ -360,7 +360,7 @@ module EAIOrchestration
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("c938b0b6-2cb6-4108-9ee0-a4f639b56359")]
             activate receive (ReceiveRequestPort.Operation_1, RequestMessage);
             [Microsoft.XLANGs.BaseTypes.DesignerPosition("7d861cc7-0f40-4c6c-a567-ad04bad6a0ca")]
-            if (RequestMessage(EAISchemas.PropertySchema.GrandTotal ) > 300)
+            if (RequestMessage(EAISchemas.PropertySchema.GrandTotal ) > 500)
             {
                 [Microsoft.XLANGs.BaseTypes.DesignerPosition("b54f55d6-82d8-48c5-8171-bdd3058c6d39")]
                 construct RequestDeclineMessage
